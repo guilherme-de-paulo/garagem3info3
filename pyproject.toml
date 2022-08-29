@@ -7,6 +7,8 @@ authors = ["Guilherme de Paulo Pereira <guilherme.pereira1680@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 Django = "^4.0.6"
+gunicorn = "^20.1.0"
+whitenoise = "^6.2.0"
 
 [tool.poetry.dev-dependencies]
 
