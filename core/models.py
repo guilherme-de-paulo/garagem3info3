@@ -1,21 +1,20 @@
 from django.db import models
 
-class Categoria(models.Model):
-    descricao = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.descricao
-
+# Create your models here.
 
 class Marca(models.Model):
-
     nome = models.CharField(max_length=50)
 
     def __str__(self):
         return self.nome
 
+class Categoria(models.Model):
+    descricao = models.CharField(max_length=100)
 
-class Carro(models.Model):
+    def __str__(self):
+        return self.descricao
+
+class Veiculo(models.Model):
     modelo = models.CharField(max_length=50)
     marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="carros")
     categoria = models.ForeignKey(
